@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Form</title>
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://storage.googleapis.com/breathecode-asset-images/5318bde604cf5c915f94897a71b49ab2523101322ea21cb046db1e67c24fa3be.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="get" action="#">
+        <div class="form-header">
+            <h1 class="titulo">Payment form example</h1>
+        </div>
+        <div class="alert">
+            <p>Some fields are missing</p>
+        </div>
+        <div class="form-content-uno">
+            <div class="tarjeta">
+                <label for="card">Card #</label>
+                <input type="text" id="card" placeholder="1234-5678-9101-1121" size="40" maxlength="16" autofocus class="input" required>
+            </div>
+            <div class="caducidad">
+                <label for="cvc">CVC #</label>
+                <input type="text" id="cvc" placeholder="0000" size="20" maxlength="4" class="input" required>
+            </div>
+            <div class="cantidad">
+                <label for="amount">Amount $</label>
+                <input type="text" id="amount" size="30" class="input" required>
+            </div>
+        </div>
+
+        <div class="form-content-dos">
+            <div class="nombre">
+                <label for="name">First Name</label>
+                <input type="text" id="name" size="50" class="input" required>
+            </div>
+            <div class="apellido">
+                <label for="name">Last Name</label>
+                <input type="text" id="name" size="50" class="input">
+            </div>
+        </div>
+
+        <div class="form-content-tres">
+            <div class="ciudad">
+                <label for="city">City</label>
+                <input type="text" id="city" size="50" class="input" required>
+            </div>
+            <div class="estado">
+                <label for="estado">State</label>
+                <select name="estados" id="estado" required>
+                    <option value="" selected hidden>Pick a state</option>
+                    <option value="1">California</option>
+                    <option value="2">Texas</option>
+                    <option value="3">Florida</option>
+                    <option value="4">Indiana</option>
+                    <option value="5">Arizona</option>
+                    <option value="6">Colorado</option>
+                    <option value="7">Washington</option>
+                    <option value="8">Nevada</option>
+                    <option value="9">Ohio</option>
+                    <option value="10">Oregon</option>
+                    <option value="11">Utah</option>
+                    <option value="12">Minnesota</option>
+                </select>
+            </div>
+            <div class="codigo-p">
+                <label for="postal">Postal Code</label>
+                <input type="text" id="postal" class="input" required>
+            </div>
+        </div>
+        <div class="form-content-cuatro">
+            <div class="tipo-card">
+                <label for="tipo">We accept:</label>
+                <div id="tipo">
+                    <input type="radio" id="master" name="tipo-card" value="mastercard" checked>
+                    <label for="master"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i></label>
+
+                    <input type="radio" id="visa" name="tipo-card" value="visacard">
+                    <label for="visa"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i></label>
+
+                    <input type="radio" id="diners" name="tipo-card" value="dinerscard">
+                    <label for="diners"><i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i></label>
+                
+                    <input type="radio" id="paypal" name="tipo-card" value="paypalcard">
+                    <label for="paypal"><i class="fa-brands fa-cc-paypal" style="color: #ffffff;"></i></label>                    
+                </div>
+            </div>
+            <div class="mensaje">
+                <label for="text">Message</label>
+                <textarea id="text" rows="4" cols="60"></textarea>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="reset" class="button-reset" value="Cancel">
+            <input type="submit" class="button-send" value="Send">
+        </div>
+    </form>
+</body>
+</html>
